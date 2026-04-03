@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "KPI Scanner",
+    "slug": "kpi-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2196F3"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.kpiscanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Esta app necesita acceso a la cámara para escanear KPIs.",
+        "NSPhotoLibraryUsageDescription": "Esta app necesita acceso a la galería para seleccionar imágenes con KPIs.",
+        "NSPhotoLibraryAddUsageDescription": "Esta app necesita permiso para guardar capturas en la galería."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2196F3"
+      },
+      "package": "com.yourcompany.kpiscanner",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Esta app necesita acceso a la cámara para escanear KPIs."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Esta app necesita acceso a la galería para seleccionar imágenes con KPIs."
+        }
+      ]
+    ]
+  }
+}
